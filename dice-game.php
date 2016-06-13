@@ -92,8 +92,10 @@ class DiceGame
     public function game()
     {
 	$poolArray = $this->createPoolArray(4);
+	$round = 0;
 	while(1)
 	{
+	    echo "\n\nRound ".++$round." : \n\n";
 	    echo "\n\nAfter dice rolled: \n\n";
 	    $poolArray = $this->rollAllPools($poolArray);
 	    $this->printPools($poolArray);
